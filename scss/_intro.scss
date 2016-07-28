@@ -1,0 +1,108 @@
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: $blue url(../img/intro/bg.jpg) right bottom no-repeat;
+  background-size: contain;
+  padding: 0;
+  padding-bottom: $waveHeight/2;
+  box-sizing: content-box;
+
+  @media (max-width: 768px) {
+    background-image: url(../img/intro/bg-medium.jpg);
+    background-size: auto 110%;
+    position: relative;
+  }
+
+  @media (max-width: 768px) and (orientation: portrait) {
+    background-size: auto 90%;
+  }
+
+  @media (max-width: 520px) {
+    background-image: url(../img/intro/bg-small.jpg);
+    background-size: auto 65%;
+    background-position: center bottom;
+    align-items: flex-start;
+  }
+
+  &-content {
+    width: 100%;
+    max-width: 75vw;
+    font-size: 3vmax;
+    text-transform: uppercase;
+    line-height: .8;
+    letter-spacing: .05em;
+
+    @media (min-width: 1600px) {
+      font-size: 3rem;
+      width: 60rem;
+    }
+
+    @media (max-width: 520px) {
+      width: auto;
+      font-size: 6vw;
+      margin-top: 5%;
+      text-align: center;
+    }
+  }
+
+  &-title {
+    color: white;
+    font-weight: 900;
+    position: relative;
+
+    > span {
+      color: rgba(white,.15);
+
+      &:first-child {
+        position: absolute;
+        right: 100%;
+      }
+    }
+  }
+
+  &-subtitle {
+    color: rgba(black,.35);
+    font-weight: 900;
+
+    span {
+      display: block;
+    }
+  }
+}
+
+// Joke
+
+.intro {
+
+  &.clone {
+    border-bottom: 100px solid white;
+  }
+
+  body.trollface &:before {
+    content: '';
+    background: url(../img/intro/trollface.gif) right bottom no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -$waveHeight/2;
+
+    @media (max-width: 768px) {
+      background-image: url(../img/intro/trollface-medium.gif);
+      background-size: auto 110%;
+    }
+
+    @media (max-width: 768px) and (orientation: portrait) {
+      background-size: auto 90%;
+    }
+
+    @media (max-width: 520px) {
+      background-image: url(../img/intro/trollface-small.gif);
+      background-size: auto 60%;
+      background-position: center bottom;
+    }
+  }
+}

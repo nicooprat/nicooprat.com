@@ -1,0 +1,78 @@
+.books {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 10% 0;
+
+  // Fix overflow bug with timeline
+
+  &-wave {
+
+    @media (min-width: 520px) and (max-width: 767px) {
+      z-index: 2;
+    }
+  }
+
+  &-content {
+    width: 100%;
+    transform: scale(1);
+  }
+
+  &-title {
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    text-align: center;
+    font-size: 3em;
+    color: rgba(black,.25);
+    font-weight: 900;
+    line-height: 1;
+    margin-top: 0;
+
+    @media (max-width: 520px) {
+      font-size: 1.5em;
+    }
+  }
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 0 5%;
+    margin: 0;
+  }
+
+  &-item {
+    flex: 0 1 220px;
+    text-align: center;
+    break-inside: avoid;
+    transform: scale(0);
+    opacity: 0;
+    transition: all .5s $easeInBack;
+
+
+    @media (max-width: 520px) {
+      flex-basis: 110px;
+    }
+
+    &.is-inview {
+      transform: scale(1);
+      opacity: 1;
+      transition-timing-function: $easeOutBack;
+    }
+  }
+
+  &-link {
+    display: block;
+    padding: 5%;
+    -webkit-tap-highlight-color: transparent;
+
+    > img {
+      display: block;
+      margin: auto;
+      box-shadow: 0 3px 10px rgba(black,.25);
+    }
+  }
+}

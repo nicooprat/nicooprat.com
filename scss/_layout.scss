@@ -1,0 +1,20 @@
+.wrapper {
+  overflow: hidden;
+}
+
+.chapter {
+  padding: 10vh 5%;
+
+  @media (max-width: 767px) {
+    padding: 10vmin;
+  }
+}
+
+.wave {
+  width: 100%;
+  height:$waveHeight;
+  display: block;
+  margin-top: -$waveHeight/2;
+  margin-bottom: -$waveHeight/2;
+  position: relative;
+}

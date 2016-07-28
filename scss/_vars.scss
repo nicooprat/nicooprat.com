@@ -1,0 +1,32 @@
+$easeInBack: cubic-bezier(0.600, -0.280, 0.735, 0.045);
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+$easeInOutBack: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+
+$blue: #3598db;
+$orange: #f39c12;
+$green: #00ce72;
+
+$social: (
+  twitter: #45aaee,
+  medium: #00ba76,
+  github: #3580c3,
+  meetup: #e8353e,
+  codepen: #000000,
+  linkedin: #0077b5,
+  dribbble: #f24788,
+  mail: #828282
+);
+
+$works: (
+  cuisinetudiant: #391e17,
+  mezcalito: #ed1e5d,
+  sport2000: #e74c3c,
+  fcgshop: #005aab
+);
+
+$waveHeight: 14vh;
+
+$headings: 'Titillium Web', Helvetica, Arial, sans-serif;
+$corpus: 'Titillium Web', Helvetica, Arial, sans-serif;
+
+$retina: "only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 320px), screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 320px), screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 320px), screen and (        min-device-pixel-ratio: 2)      and (min-width: 320px), screen and (                min-resolution: 192dpi) and (min-width: 320px), screen and (                min-resolution: 2dppx)  and (min-width: 320px)";

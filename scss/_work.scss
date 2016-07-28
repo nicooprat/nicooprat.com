@@ -1,0 +1,86 @@
+.work {
+  background-color: white;
+
+  &-title {
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    text-align: center;
+    font-size: 3em;
+    color: rgba(black,.25);
+    font-weight: 900;
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 5%;
+
+    @media (max-width: 520px) {
+      font-size: 1.5em;
+    }
+  }
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding-left: 0;
+    font-size: 1.15em;
+  }
+
+  &-item {
+    flex: 0 0 20%;
+    display: flex;
+
+    @each $k, $v in $works {
+
+      &_#{$k} {
+        color: $v;
+      }
+    }
+
+    @media (max-width: 1200px) {
+      flex-basis: 45%;
+      margin: 5% 0;
+    }
+
+    @media (max-width: 519px) {
+      flex-basis: 100%;
+    }
+  }
+
+  &-link {
+    color: inherit;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  &-pic {
+    border-radius: 3px;
+    box-shadow: 0 0 0 1px rgba(black,.1), 0 4px 10px rgba(black,.35);
+    margin-bottom: 1em;
+  }
+
+  &-text {
+    display: block;
+  }
+
+  &-name {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    font-family: $headings;
+    font-weight: 900;
+    font-size: 1.25em;
+  }
+
+  &-desc {
+    display: block;
+    opacity: .8;
+    margin: .5em 0;
+  }
+
+  &-url {
+    display: block;
+    opacity: .5;
+    text-decoration: underline;
+  }
+}
