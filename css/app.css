@@ -2,7 +2,8 @@
   box-sizing: border-box; }
 
 body {
-  background-color: #3598db;
+  min-width: 320px;
+  background-color: #bb9974;
   font-size: 16px;
   line-height: 1.58;
   font-family: "Titillium Web", Helvetica, Arial, sans-serif;
@@ -46,21 +47,29 @@ img {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 100vh;
-  background: #3598db url(../img/intro/bg.jpg) right bottom no-repeat;
-  background-size: contain;
-  padding: 0;
+  padding-top: 44%;
+  background: #bb9974 url(../img/intro/bg.jpg) no-repeat;
+  background-size: auto 100%;
+  background-position: bottom right 50%;
   padding-bottom: 7vh;
-  box-sizing: content-box; }
-  @media (max-width: 768px) {
+  box-sizing: content-box;
+  position: relative;
+  font-size: 3vmax; }
+  @media (max-width: 850px) {
+    .intro {
+      background-image: url(../img/intro/bg-medium.jpg);
+      background-position: bottom right;
+      background-size: auto 110%;
+      position: relative;
+      padding-top: 72%; } }
+  @media (max-width: 768px) and (orientation: landscape) {
     .intro {
       background-image: url(../img/intro/bg-medium.jpg);
       background-size: auto 110%;
-      position: relative; } }
-  @media (max-width: 768px) and (orientation: portrait) {
-    .intro {
-      background-size: auto 90%; } }
-  @media (max-width: 520px) {
+      position: relative;
+      padding-top: 50%;
+      font-size: 4vmax; } }
+  @media (max-width: 600px) and (orientation: portrait) {
     .intro {
       background-image: url(../img/intro/bg-small.jpg);
       background-size: auto 65%;
@@ -69,28 +78,40 @@ img {
       -webkit-align-items: flex-start;
           -ms-flex-align: start;
                   -ms-grid-row-align: flex-start;
-              align-items: flex-start; } }
+              align-items: flex-start;
+      padding-top: 150%;
+      font-size: 6vw; } }
+  @media (min-width: 1600px) {
+    .intro {
+      font-size: 3rem; } }
   .intro-content {
     width: 100%;
     max-width: 75vw;
-    font-size: 3vmax;
     text-transform: uppercase;
     line-height: .8;
-    letter-spacing: .05em; }
+    letter-spacing: .05em;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    width: 40%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
     @media (min-width: 1600px) {
       .intro-content {
-        font-size: 3rem;
         width: 60rem; } }
-    @media (max-width: 520px) {
+    @media (max-width: 600px) and (orientation: portrait) {
       .intro-content {
         width: auto;
-        font-size: 6vw;
-        margin-top: 5%;
-        text-align: center; } }
+        text-align: center;
+        left: 50%;
+        top: 10%;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%); } }
   .intro-title {
     color: white;
     font-weight: 900;
-    position: relative; }
+    position: relative;
+    margin-top: 0; }
     .intro-title > span {
       color: rgba(255, 255, 255, 0.15); }
       .intro-title > span:first-child {
@@ -98,7 +119,8 @@ img {
         right: 100%; }
   .intro-subtitle {
     color: rgba(0, 0, 0, 0.35);
-    font-weight: 900; }
+    font-weight: 900;
+    margin-bottom: 0; }
     .intro-subtitle span {
       display: block; }
 
@@ -107,20 +129,18 @@ img {
 body.trollface .intro:before {
   content: '';
   background: url(../img/intro/trollface.gif) right bottom no-repeat;
-  background-size: contain;
+  background-position: bottom right 20%;
+  background-size: auto 100%;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: -7vh; }
-  @media (max-width: 768px) {
+  @media (max-width: 850px) {
     body.trollface .intro:before {
       background-image: url(../img/intro/trollface-medium.gif);
       background-size: auto 110%; } }
-  @media (max-width: 768px) and (orientation: portrait) {
-    body.trollface .intro:before {
-      background-size: auto 90%; } }
-  @media (max-width: 520px) {
+  @media (max-width: 600px) and (orientation: portrait) {
     body.trollface .intro:before {
       background-image: url(../img/intro/trollface-small.gif);
       background-size: auto 60%;
